@@ -17,8 +17,10 @@ public class MainClass {
 		ctx.refresh(); // 컨테이너 재로딩(컨테이너 설정)
 		
 		Student stu1 = ctx.getBean("student1", Student.class); // 컨테이너 사용
-		
 		System.out.println(stu1.getName()); // 컨테이너 사용
+		
+		OtherStudent otherstu1 = ctx.getBean("otherStudent", OtherStudent.class);
+		System.out.println(otherstu1.getName());
 		
 		
 		ctx.close(); // 컨테이너 종료
